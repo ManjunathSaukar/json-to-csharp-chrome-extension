@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 10px;
+    background: transparent;
+}
+
+.container {
+    width: 360px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+textarea, input {
+  border-radius: 8px;
+}
+
+.section {
+    margin-top: 12px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+button {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ddd;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+.primary {
+    width: 100%;
+    margin-top: 12px;
+    background: #007bff;
+    color: white;
+}
+
+.primary:hover {
+    background: #0056b3;
+}
+
+.toast {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.loader::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 3px solid #ccc;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
